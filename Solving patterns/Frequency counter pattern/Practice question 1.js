@@ -25,19 +25,20 @@ function sameFrequency(int1, int2) {
             lookup2[arr2[j]] = lookup2[arr2[j]] + 1
         }
 
-    console.log(lookup2)
+        console.log(lookup2)
 
-    for (const key in lookup) {
+        for (const key in lookup) {
 
-        if (lookup[key] !== lookup2[key]) {
-            return false
+            if (lookup[key] !== lookup2[key]) {
+                return false
+            }
+
+            else {
+                return true
+            }
+
         }
-
-        else {
-            return true
-        }
-
     }
 };
 
-    console.log(sameFrequency(3589578, 5879385))
+console.log(sameFrequency(3589578, 5879385))
