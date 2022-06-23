@@ -27,20 +27,13 @@ function areThereDuplicates(arg) {
     console.log(lookup)
 
     for (let key in lookup) {
-        if (lookup[key] > 1) {
-            return true
-        }
+        if (lookup[key] > 1) return true
     }
 
     return false
 
 }
 
+console.log(areThereDuplicates(['a', 'b', 'c', 'a']))
 
 
-
-
-
-
-
-console.log(areThereDuplicates([1, 2, 3]))
