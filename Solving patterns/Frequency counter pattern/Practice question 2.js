@@ -43,13 +43,12 @@ console.log(".............using multiple pointers..............")
 
 function areThereDuplicates2(arr2) {
 
-    let arr = arr2.sort()
+    let arr = arr2.sort();
+    console.log(arr)
     let left = 0;
     let right = 1
    
-
     while (right < arr.length) {
-
         if (arr[left] === arr[right]) {
             return true
         }
@@ -63,7 +62,10 @@ function areThereDuplicates2(arr2) {
 
 }
 
-console.log(areThereDuplicates2(['a', 'b', 'c', 'b']))
+console.log(areThereDuplicates2([1, 2, 3, 4]))
+
+
+
 
 
 
