@@ -21,20 +21,26 @@ function areThereDuplicates(arg) {
         else {
             lookup[arg[i]] = 1
         }
-        
+
     }
-    
+
     console.log(lookup)
 
-    for (const key in lookup) {
-    
-        if(lookup[key] > 1) return true
+    for (let key in lookup) {
+        if (lookup[key] > 1) {
+            return true
+        }
     }
-    return false;
 
+    return false
 
 }
 
 
 
-console.log(areThereDuplicates([1, 2, 2]))
+
+
+
+
+
+console.log(areThereDuplicates([1, 2, 3]))
