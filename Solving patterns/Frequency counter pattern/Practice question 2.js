@@ -28,7 +28,9 @@ function areThereDuplicates(arg) {
     console.log(lookup)
 
     for (let key in lookup) {
-        if (lookup[key] > 1) return true
+        if (lookup[key] > 1) {
+            return true
+        }
     }
 
     return false
@@ -64,7 +66,7 @@ function areThereDuplicates2(arr2) {
 
 }
 
-console.log(areThereDuplicates2([1, 2, 3, 9,8]))
+console.log(areThereDuplicates2([1, 2, 3, 9, 8]))
 
 
 
