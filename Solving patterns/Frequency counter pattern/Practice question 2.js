@@ -27,15 +27,10 @@ function areThereDuplicates(arg) {
     console.log(lookup)
 
     for (const key in lookup) {
-        
-        if (!lookup[key] === 2) {
-            return false;
-        }
-
-        // else{
-        //     return true
-        // }
+    
+        if(lookup[key] > 1) return true
     }
+    return false;
 
 
 }
