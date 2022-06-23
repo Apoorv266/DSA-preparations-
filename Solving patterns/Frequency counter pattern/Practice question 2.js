@@ -8,6 +8,7 @@
 // areThereDuplicates('a', 'b', 'c', 'a') // true 
 
 
+//...................using frequency counter method..............................
 
 function areThereDuplicates(arg) {
 
@@ -34,6 +35,35 @@ function areThereDuplicates(arg) {
 
 }
 
-console.log(areThereDuplicates(['a', 'b', 'c', 'a']))
+console.log(areThereDuplicates(['b', 'c', 'a']))
+
+
+console.log(".............using multiple pointers..............")
+
+
+function areThereDuplicates2(arr2) {
+
+    let arr = arr2.sort()
+    let left = 0;
+    let right = 1
+   
+
+    while (right < arr.length) {
+
+        if (arr[left] === arr[right]) {
+            return true
+        }
+
+            left++
+            right++
+            
+        }
+        
+        return false
+
+}
+
+console.log(areThereDuplicates2(['a', 'b', 'c', 'b']))
+
 
 
