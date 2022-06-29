@@ -5,12 +5,11 @@
 //................................naive solution............................
 
 function averagePair(arr, avg) {
-    // console.log(avg)
-    // console.log(arr)
+ 
     let avg2 = avg + avg
-    // console.log("avg2 ->", avg2)
+ 
 
-    if (arr.length) {
+    if (arr.length == 0) {
         console.log(false)
     }
 
@@ -28,4 +27,4 @@ function averagePair(arr, avg) {
     }
 }
 
-averagePair([1, 2, 3], 2.5)
+averagePair([1,3, 3, 5, 6, 7, 10, 12, 19], 8)
