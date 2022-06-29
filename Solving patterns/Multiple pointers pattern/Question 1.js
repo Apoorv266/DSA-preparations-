@@ -33,34 +33,32 @@
 
 //.........................two pointer method...................................
 
-function averagePair(arr, avg) {
+function averagePair(arr, num) {
 
-    let left = 0;
-    let plus = 1;
-    let avg2 = avg + avg
+    // pointers from both extreme ends to center
+    let start = 0;
+    let end = arr.length - 1;
 
-    // if (arr.length == 0) {
-    //     console.log(false)
-    // }
 
-    // else {
-
-    while (plus < arr.length) {
-        if (arr[left] + arr[plus] == avg2) {
+    while (start < end) {
+        let avg = (arr[start] + arr[end]) / 2
+        if (avg === num) {
             return true
         }
 
+        else if (avg < num) {
+            start++
+        }
         else {
-            left++
-            plus++
+            end--
         }
     }
 
     return false
-    // }
+
 }
 
-console.log(averagePair([1, 3, 3, 5, 6, 10, 7, 12, 19], 8))
+console.log(averagePair([1, 2, 3], 2.5))
 
 
 
