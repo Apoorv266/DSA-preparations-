@@ -27,16 +27,41 @@
 //     }
 // }
 
-// averagePair([1,3, 3, 5, 6, 7, 10, 12, 19], 8)
+// averagePair([1,2, 3, 5, 1, 4], 2.5)
 
 
 
 //.........................two pointer method...................................
 
 function averagePair(arr, avg) {
-    if (arr.length == 0) {
-        console.log(false)
+
+    let left = 0;
+    let plus = 1;
+    let avg2 = avg + avg
+
+    // if (arr.length == 0) {
+    //     console.log(false)
+    // }
+
+    // else {
+
+    while (plus < arr.length) {
+        if (arr[left] + arr[plus] == avg2) {
+            return true
+        }
+
+        else {
+            left++
+            plus++
+        }
     }
+
+    return false
+    // }
 }
 
-averagePair([1, 2, 3], 2.5)
+console.log(averagePair([1, 3, 3, 5, 6, 10, 7, 12, 19], 8))
+
+
+
+

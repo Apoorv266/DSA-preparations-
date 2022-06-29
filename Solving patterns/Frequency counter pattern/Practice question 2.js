@@ -46,7 +46,6 @@ console.log(".............using multiple pointers..............")
 function areThereDuplicates2(arr2) {
 
     let arr = arr2.sort();  // sorting array in ascending order
-    console.log(arr)
     let left = 0;
     let right = 1
 
