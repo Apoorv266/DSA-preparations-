@@ -1,0 +1,1 @@
+// given array of integers that is sorted in ascending order, find two numbers such that they add up to a specific number 

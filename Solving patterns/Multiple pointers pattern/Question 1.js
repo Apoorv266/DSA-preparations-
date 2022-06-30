@@ -58,7 +58,7 @@ function averagePair(arr, num) {
 
 }
 
-console.log(averagePair([1, 2, 3], 2.5))
+console.log(averagePair([1, 6, 3, 2], 4.5))
 
 
 
