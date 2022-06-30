@@ -14,16 +14,16 @@ function isSubsequence(str1, str2) {
     var i = 0;
     var j = 0;
 
-    if (!str1) return "str not present";
+    if (str1.length === 0) return "true";
 
 
     while (j < str2.length) {
 
-        if (str2[j] === str1[i]) {
+        if (str2[j] === str1[i]) { // to check the index of characeters in string 1 is equal in string 2
             i++;
         }
 
-        else if (i === str1.length) {
+        else if (i === str1.length) {  // to check if all the characters are present in the string 
             return true;
         }
 
