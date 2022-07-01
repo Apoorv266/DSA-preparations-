@@ -4,11 +4,31 @@
 // output = [0,1]
 
 
-function twoSum(arr, tar){
-let start = 0
-let end = arr.length - 1
+function twoSum(arr, total) {
+    let start = 0
+    let end = arr.length - 1
 
+    while (start < end) {
+
+        let sum = arr[start] + arr[end]
+        if (sum < total) {
+            start++
+        }
+
+        else if (sum === total) {
+            return true
+        }
+
+        else {
+            end--
+        }
+
+
+
+    }
+
+    return false
 
 }
 
-console.log(twoSum([2, 7, 11, 15] , 9))
+console.log(twoSum([2, 7, 11, 15], 9))
