@@ -5,7 +5,7 @@
 
 
 function twoSum(arr, total) {
-    let start = 0
+    let start = 0 
     let end = arr.length - 1
 
     while (start < end) {
