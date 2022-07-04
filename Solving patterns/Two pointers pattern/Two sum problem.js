@@ -18,7 +18,7 @@ function twoSum(arr, total) {
         else if (sum === total) {
             return [start + 1 , end + 1]
         }
-
+ 
         else {
             end--
         }
