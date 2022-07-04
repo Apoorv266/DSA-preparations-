@@ -5,6 +5,7 @@
 
 
 function twoSum(arr, total) {
+    // two pointer approach from 2 different sides
     let start = 0;
     let end = arr.length - 1
 
