@@ -8,7 +8,6 @@ function checkPalim(str) {
         if (str[start] !== str[end]) {
             return false
         }
-
         start++
         end--
     }
