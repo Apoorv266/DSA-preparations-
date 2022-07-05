@@ -5,7 +5,7 @@ function checkPalim(str) {
     let end = str.length - 1
 
     while (start < end) {
-        if (str[start] !== str[end]) {
+        if (str[start] != str[end]) {
 
             return false
         }
@@ -18,4 +18,4 @@ function checkPalim(str) {
     return true
 }
 
-console.log(checkPalim("rapcap"))
+console.log(checkPalim("madam"))
