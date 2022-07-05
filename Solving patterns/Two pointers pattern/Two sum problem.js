@@ -29,4 +29,4 @@ function twoSum(arr, total) {
 
 }
 
-console.log(twoSum([0, 1, 5, 6, 7, 10], 17))
+console.log(twoSum([-3, 2, 3, 3, 6, 8, 5], 6))
