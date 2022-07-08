@@ -5,10 +5,10 @@
 var removeElement = function (nums, val) { 
     console.log(nums)
 
-    let start = 0 
+    let start = 0  
 
     while (start < nums.length) {
-        if (nums[start] === val) {
+        if (nums[start] === val) { 
             nums[start].pop()
         }
 
