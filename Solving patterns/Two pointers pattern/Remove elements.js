@@ -9,7 +9,7 @@ var removeElement = function (nums, val) {
 
     while (start < nums.length) {
         if (nums[start] === val) { 
-            nums[start].pop()
+            nums[start].pop() 
         }
 
         start++
