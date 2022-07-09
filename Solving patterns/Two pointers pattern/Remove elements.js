@@ -3,8 +3,8 @@
 
 
 var removeElement = function (nums, val) { 
-    console.log(nums)
- 
+    // console.log(nums)
+  
     let start = 0  
 
     while (start < nums.length) {
