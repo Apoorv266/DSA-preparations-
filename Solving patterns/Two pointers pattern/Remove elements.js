@@ -3,20 +3,17 @@
 
 
 var removeElement = function (nums, val) { 
-    console.log(nums)
   
     let start = 0  
 
-    while (start < nums.length) {
-        if (nums[start] === val) { 
-            nums[start].pop() 
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i]  !== val) {
+            nums[start] = nums[i]
+            start++
         }
-
-        start++
     }
-
-    console.log(nums)
+   return start
 };
 
 
-removeElement([3, 2, 2, 3], 3)
+console.log(removeElement([3, 2, 2, 3], 3))
