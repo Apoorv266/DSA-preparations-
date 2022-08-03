@@ -11,7 +11,7 @@ var removeElement = function (nums, val) {
             start++
         }
     }
-   return nums
+   return start
 };
 
 
