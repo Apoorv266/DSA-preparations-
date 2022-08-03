@@ -11,6 +11,7 @@ var removeElement = function (nums, val) {
             start++
         }
     }
+    console.log(nums)
    return start
 };
 
