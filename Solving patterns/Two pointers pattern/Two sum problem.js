@@ -31,6 +31,8 @@ var twoSum = function(nums, target) {
     let i = 0
     while(i < nums.length){
         let check = target - nums[i]
+        // i != nums.indexOf(check) is added so that same number cannot be picked up (3 + 3 = 6) 
+        // indexof returns first index of the item (if 3 is at last and at first then even for last 3 the index will be 0)
         if(nums.includes(check) && (i != nums.indexOf(check))){
             return [i, nums.indexOf(check)]
         }else{
@@ -39,4 +41,5 @@ var twoSum = function(nums, target) {
     }
 };
 
-console.log(twoSum([2, 7, 11, 15],9))
+console.log(twoSum([3, 2, 7, 3],6))
+
