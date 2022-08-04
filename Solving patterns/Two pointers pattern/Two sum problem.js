@@ -4,29 +4,39 @@
 // output = [0,1]
 
 
-function twoSum(arr, total) {
-    // two pointer approach from 2 different sides
-    let start = 0;
-    let end = arr.length - 1
+// function twoSum(nums, target) {
+//     // two pointer approach from 2 different sides
+//     let start = 0;
+//     let end = nums.length - 1
 
-    while (start < end) {
+//     while (start < end) {
 
-        let sum = arr[start] + arr[end]
-        if (sum < total) {
-            start++
-        }
+//         let sum = nums[start] + nums[end]
+//         if (sum < target) {
+//             start++
+//         }
 
-        else if (sum === total) {
-            return [start + 1 , end + 1]
-        }
- 
-        else {
-            end--
+//         else if (sum > target) {
+//             end--
+//         }
+
+//         else {
+//            return [start, end]
+//         }
+//     }
+// }
+
+
+var twoSum = function(nums, target) {
+    let i = 0
+    while(i < nums.length){
+        let check = target - nums[i]
+        if(nums.includes(check) && (i != nums.indexOf(check))){
+            return [i, nums.indexOf(check)]
+        }else{
+            i++
         }
     }
+};
 
-    return false
-
-}
-
-console.log(twoSum([-3, 2, 3, 3, 6, 8, 5], 6))
+console.log(twoSum([2, 7, 11, 15],9))
