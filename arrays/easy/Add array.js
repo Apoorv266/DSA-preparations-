@@ -4,7 +4,7 @@ function addArr(arr1, arr2) {
     let ans = []
     let carry = 0
 
-    // common loop till both array length are equal
+    // common loop till both array length are equal (to add the items that are overlapping)
     while (i >= 0 && j >= 0) {
         let val1 = arr1[i];
         let val2 = arr2[j];
