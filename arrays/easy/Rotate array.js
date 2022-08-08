@@ -16,13 +16,15 @@
 
 var rotate2 = function(nums, k) {
 let temp = []
+let n = nums.length
 
-for (let i = 0; i < nums.length; i++) {
-temp[(i + k) % nums.length] = nums[i]
+for (let i = 0; i < n; i++) {
+    let f = i + k 
+    temp[f % n] = nums[i]   
 }
- 
+
 temp = nums
-return nums 
+return temp 
 }
 
 
