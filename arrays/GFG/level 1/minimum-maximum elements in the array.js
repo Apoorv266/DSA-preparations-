@@ -1,29 +1,33 @@
 // Your task is to find the minimum and maximum elements in the array.
 
 function getMinMax(arr, n) {
-    let a = 0
-    let b = 0
-
-    if (n == 1) return 0;
+    let minmax = [];
     arr = arr.sort(function (a, b) { return a - b });
 
-    console.log(arr)
-    for (let i = arr.length; i >= 0; i--) {
-        if (arr[i - 1] < arr[i]) { 
-           a = arr[i]
-           break
+    /*If there is only one element then return it as min and max both*/
+    if (n === 1) {
+        minmax[0] = arr[0]
+        minmax[1] = arr[0]
+        return minmax;
+    }
+
+    for (let j = 0; j < n; j++) {
+        if (arr[j] < arr[j + 1]) {
+            minmax[0] = arr[j]
+            break
+        }
+
+    }
+    
+    for (let i = n; i >= 0; i--) {
+        if (arr[i - 1] < arr[i]) {
+            minmax[1] = arr[i]
+            break
         }
     }
 
-    for (let j = 0; j < arr.length; j++) {
-       if (arr[j] < arr[j + 1]) {
-        b = arr[j]
-        break
-       }
-        
-    }
-    return `min = ${b}, max = ${a}`
+    return minmax
 }
 
-console.log(getMinMax([1, 345, 234, 21, 56789], 5))
+console.log(getMinMax([3 ,2 ,1 ,56 ,1000, 167], 6))
 
