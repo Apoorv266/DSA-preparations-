@@ -1,32 +1,44 @@
-// rotate an array to left by k steps
-// function rotate(arr, k) {
-//     for (let j = 1; j <= k ; j++) {
-//         arr.push(arr[0])
-//         arr.shift()
-//     } 
-//     return arr
-// }
+// rotate an array to right by k steps
 
-// console.log(rotate([1,2,3,4,5,6,7],3))
+// Approach 1 --- using push shift
+
+function rotate(arr, k) {
+    k = k % arr.length;
+   while (k > 0) {
+    arr.unshift(arr[arr.length - 1])
+    arr.pop()
+    k--
+   }
+    return arr
+}
+
+console.log(rotate([1,2,3,4,5],7))
+
 
 
 // rotate an array to right by k steps
 
+// Approach 2 --- using reverse methods
 
+var rotate2 = function (nums, k) {
+    k = k % nums.length;
+    reverse(nums, 0 , nums.length - 1)
+    reverse(nums, 0 , k - 1)
+    reverse(nums, k , nums.length - 1)
+    return nums
+}  
 
-var rotate2 = function(nums, k) {
-let temp = []
-let n = nums.length
-
-for (let i = 0; i < n; i++) {
-    let f = i + k 
-    temp[f % n] = nums[i]   
+function reverse(nums, start ,end) {
+    while (start < end) {
+        let temp = nums[start]
+        nums[start]  = nums[end] 
+        nums[end] = temp 
+        start++
+        end--
+    }  
 }
 
-temp = nums
-return temp 
-}
+let nums = [1, 2, 3, 4, 5, 6, 7]
+console.log(rotate2(nums, 3))
 
 
-
-console.log(rotate2([1,2,3,4,5,6,7],3))
