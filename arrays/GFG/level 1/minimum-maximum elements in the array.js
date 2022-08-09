@@ -11,6 +11,7 @@ function getMinMax(arr, n) {
         return minmax;
     }
 
+    // for finding minimum value
     for (let j = 0; j < n; j++) {
         if (arr[j] < arr[j + 1]) {
             minmax[0] = arr[j]
@@ -18,7 +19,7 @@ function getMinMax(arr, n) {
         }
 
     }
-    
+    // for finding maximum value
     for (let i = n; i >= 0; i--) {
         if (arr[i - 1] < arr[i]) {
             minmax[1] = arr[i]
@@ -29,5 +30,5 @@ function getMinMax(arr, n) {
     return minmax
 }
 
-console.log(getMinMax([3 ,2 ,1 ,56 ,1000, 167], 6))
+console.log(getMinMax([3, 2, 1, 56, 1000, 167], 6))
 
