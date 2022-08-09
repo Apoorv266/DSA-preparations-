@@ -13,12 +13,12 @@ var check = function (nums) {
         count++
     }
 
-console.log(count)
+
     if (count <= 1) {
         return true
     }
 
-    else{
+    else {
         return false
     }
 }
