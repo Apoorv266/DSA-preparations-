@@ -1,5 +1,7 @@
 // Given a random set of numbers, Print them in sorted order.
 
+// bubble sort 
+
 // function sortArr(n, arr) {
 //     var done = false
 //     while (!done) {
@@ -16,28 +18,26 @@
 //     return arr
 // }
 
+// accepted - two pointer approach
 
 function sortArr(n, arr) {
     let i = 0
     let j = n - 1
-
-    while (j >= i) {
+    while (i <= j) {
         if (Math.sign(arr[i] - arr[j]) == 1) {
             temp = arr[i];
             arr[i] = arr[j];
             arr[j] = temp;
         }
-        j--
-        
         if (i === j) {
             i++
-        }
+            j = n 
+        } 
+        j--
     }
-
-
     return arr
 }
-console.log(sortArr(4, [5, 4, 1, 2]))
+console.log(sortArr(6, [100, 23, 43, 64, 12, 3]))
 
 
 // accepted - brute force
@@ -54,9 +54,6 @@ console.log(sortArr(4, [5, 4, 1, 2]))
 //       }
 //       return arr
 // }
-
-
-
 
 
 
