@@ -18,23 +18,36 @@
 
 
 function sortArr(n, arr) {
+
     for (let i = 0; i < n; i++) {
         if (Math.sign(arr[i] - arr[i + 1]) == 1) {
-           let temp = arr[i + 1]
-           arr[i + 1] = arr[i]
-           arr[i] = temp
-        } 
+            let temp = arr[i + 1]
+            arr[i + 1] = arr[i]
+            arr[i] = temp
+        }
     }
+
     return arr
 }
+console.log(sortArr(4, [5, 4, 1, 2]))
 
-console.log(sortArr(6, [5, 4, 1, 2]))
+
+// accepted - brute force 
+
+// function sortArr(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         for (let j = i + 1; j < arr.length; j++) {
+//           if (arr[i] > arr[j]) {
+//             temp = arr[i];
+//             arr[i] = arr[j];
+//             arr[j] = temp;
+//           }
+//         }
+//       }
+//       return arr
+// }
 
 
-let a = 5
-let b = 4
-
-console.log(Math.sign(a - b))
 
 
 
