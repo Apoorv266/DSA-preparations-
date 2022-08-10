@@ -18,21 +18,29 @@
 
 
 function sortArr(n, arr) {
+    let i = 0
+    let j = n - 1
 
-    for (let i = 0; i < n; i++) {
-        if (Math.sign(arr[i] - arr[i + 1]) == 1) {
-            let temp = arr[i + 1]
-            arr[i + 1] = arr[i]
-            arr[i] = temp
+    while (j >= i) {
+        if (Math.sign(arr[i] - arr[j]) == 1) {
+            temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+        j--
+        
+        if (i === j) {
+            i++
         }
     }
+
 
     return arr
 }
 console.log(sortArr(4, [5, 4, 1, 2]))
 
 
-// accepted - brute force 
+// accepted - brute force
 
 // function sortArr(arr) {
 //     for (let i = 0; i < arr.length; i++) {
