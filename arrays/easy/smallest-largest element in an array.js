@@ -14,6 +14,5 @@ function orderFun(arr,k) {
 }
 }
 
-// 
 
 console.log(orderFun([5, 5, 5],1))
