@@ -13,6 +13,6 @@ function orderFun(arr,k) {
     return `${Chars[Chars.length - k]},${Chars[k - 1] }`
 }
 }
-// 
+
 
 console.log(orderFun([5, 5, 5],1))
