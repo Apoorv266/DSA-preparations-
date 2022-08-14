@@ -2,19 +2,19 @@
 
 function doUnion(a, b) {
 
-
-    // for (let j = 0; j < b.length; j++) {
-    //     if (!a.includes(b[j])) {
-    //         a.push(b[j])
-    //     }
-    // }
-
     b.map((item) =>{
         if (!a.includes(item)) {
             a.push(item)
         }
     })
-    return a
+    return [...new Set(a)].length
+}
+
+// or
+
+function doUnion(a, n, b, m){
+    let oneArr = [...a,...b]
+    return [...new Set(oneArr)].length
 }
 
 console.log(doUnion([85, 25, 1, 32, 54, 6, 85], [85, 2]))
