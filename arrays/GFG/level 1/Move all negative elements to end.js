@@ -31,15 +31,27 @@
 
 
 function segregateElements(arr, n) {
-    let temp
-    for (let i = arr.length; i > 0; i--) {
-        if (arr[i] < 0) {
-            temp = arr[i]
-        let temp2 = arr[i + 1]
-        // arr[]
-        }
+    // Create an empty array to store result
+    let temp = new Array(n);
 
-    }
+    // Traversal array and store +ve element in
+    // temp array
+    let j = 0; // index of temp
+    for (let i = 0; i < n; i++)
+        if (arr[i] >= 0)
+            temp[j++] = arr[i];
+
+    // If array contains all positive or all negative.
+    if (j == n || j == 0)
+        return;
+
+    // Store -ve element in temp array
+    for (let i = 0; i < n; i++)
+        if (arr[i] < 0)
+            temp[j++] = arr[i];
+
+    for (let i = 0; i < n; i++) arr[i] = temp[i];
+    return arr
 }
 
-console.log(segregateElements([-1, -2, 4, 5], 4))
+console.log(segregateElements([-2, -3, 4, 5], 4))
