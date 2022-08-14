@@ -1,33 +1,33 @@
 // Given an unsorted array arr[] of size N having both negative and positive integers. The task is place all negative element at the end of array without changing the order of positive element and negative element.
 
 
-// function segregateElements(arr, n) {
-//     let arrPositive=[];
+function segregateElements(arr, n) {
+    let arrPositive=[];
 
-//     let arrNegitive = [];
+    let arrNegitive = [];
 
-//     for(let i=0;i<n;i++){
-//         if(arr[i]>0){
-//             arrPositive.push(arr[i]);
-//         }else{
-//             arrNegitive.push(arr[i]);
-//         }
-//     }
+    for(let i=0;i<n;i++){
+        if(arr[i]>0){
+            arrPositive.push(arr[i]);
+        }else{
+            arrNegitive.push(arr[i]);
+        }
+    }
 
-//     for(let i=0;i<arrPositive.length;i++){
-//         arr[i] = arrPositive[i]
-//     }
-//     console.log("arr" ,arr)
-//     for(let i=0;i<arrNegitive.length;i++){
-//          arr[arrPositive.length+i] = arrNegitive[i]
-//     }
+    for(let i=0;i<arrPositive.length;i++){
+        arr[i] = arrPositive[i]
+    }
+    console.log("arr" ,arr)
+    for(let i=0;i<arrNegitive.length;i++){
+         arr[arrPositive.length+i] = arrNegitive[i]
+    }
 
-//     console.log(arrPositive)
+    console.log(arrPositive)
 
-//     console.log(arrNegitive)
+    console.log(arrNegitive)
 
-//    return arr
-// }
+   return arr
+}
 
 
 function segregateElements(arr, n) {
@@ -55,3 +55,5 @@ function segregateElements(arr, n) {
 }
 
 console.log(segregateElements([-2, -3, 4, 5], 4))
+
+
