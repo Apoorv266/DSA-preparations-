@@ -16,3 +16,5 @@ function binarysearch(array, num) {
     }
     return -1;
 }
+
+console.log(binarysearch([2, 4, 3, 5, 36, 7, 2, 4, 6], 36))
