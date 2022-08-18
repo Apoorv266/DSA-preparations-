@@ -1,6 +1,6 @@
 var kidsWithCandies = function(candies, extraCandies) {
-    let maxCandiesHave = Math.max(...candies)
-    console.log(maxCandiesHave)
+    let maxCandiesHave = Math.max(...candies) // we find the maximum item in array candies
+   
     let output = []
     for(let i = 0; i < candies.length; i++){
       if((candies[i] + extraCandies) >= maxCandiesHave){
