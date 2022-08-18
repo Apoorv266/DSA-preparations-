@@ -1,7 +1,6 @@
 var mostWordsFound = function (sentences) {
-    // console.log(sentences[0])
     
-    let wordlen = 1
+    let wordlen = 0
     let j = 0
     
     while (j < sentences.length) {
@@ -23,6 +22,6 @@ var mostWordsFound = function (sentences) {
     return wordlen
 }
 
-let sentences = ["sgvfsvk"]
+let sentences = ["alice and bob love leetcode","i think so too","this is great thanks very much"]
 
 console.log(mostWordsFound(sentences))
