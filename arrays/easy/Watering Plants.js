@@ -1,28 +1,27 @@
 var wateringPlants = function (plants, capacity) {
-    // console.log(plants[3])
+
     let counter = 0
     let val = capacity
-
+    
     for (let i = 0; i < plants.length; i++) {
-        let subs = val - plants[i]
-
-        if (val > plants[i]) {
-            val = subs
+        
+        if (val >= plants[i]) {
+            val = val - plants[i]
             counter+=1
         }
         
-        else if (val < plants[i]) {
-            val = subs
-            let add =  i + (i + 1)
-            counter += add 
+        else if (val <= plants[i]) {
+            val = capacity
+            val = val - plants[i]
+            counter += i + (i + 1)
         }
-        console.log(subs,val,counter,i)
     }
     
     return counter
 };
 
-console.log(wateringPlants([2, 2, 3, 3], 5))
+
+console.log(wateringPlants([3,2,4,2,1], 6))
 
 
 // let a = 2
