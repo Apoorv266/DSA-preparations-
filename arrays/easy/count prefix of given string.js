@@ -9,7 +9,7 @@ var countPrefixes = function(words, s) {
 };
 
 var countPrefixes = function(words, s) {
-    return words.filter((word) => word.slice(0,word.length) === s.slice(0,word.length)).length;
+    return words.filter((word) => word === s.slice(0,word.length)).length;
 };
 
 
