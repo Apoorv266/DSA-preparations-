@@ -3,11 +3,14 @@ var uniqueOccurrences = function(arr) {
     let i = 0
     let counter = 0
     while (i < arr2.length) {
+        let temp = 0
         for (let j = 0; j < arr.length; j++) {
            if (arr2[i] === arr[j] ) {
-            counter++
+            temp++
            }
-            
+        }
+        if (counter === temp) {
+            counter = temp
         }
         i++
     }
