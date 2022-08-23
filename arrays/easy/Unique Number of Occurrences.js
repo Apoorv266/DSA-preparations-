@@ -4,7 +4,6 @@ var uniqueOccurrences = function(arr) {
     for(let num of arr){
         obj[num] ? obj[num]++ : obj[num] = 1;
     }
-    
     console.log(obj)
     for(let num in obj){
       if(newArr.includes(obj[num])) return false
@@ -14,4 +13,4 @@ var uniqueOccurrences = function(arr) {
     return true;
 };
 
-console.log(uniqueOccurrences([1, 2, 4]))
+console.log(uniqueOccurrences([1, 2,2, 4]))
