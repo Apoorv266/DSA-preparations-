@@ -1,20 +1,17 @@
 var uniqueOccurrences = function(arr) {
-    let arr2 = Array.from(new Set(arr))
-    let i = 0
-    let counter = 0
-    while (i < arr2.length) {
-        let temp = 0
-        for (let j = 0; j < arr.length; j++) {
-           if (arr2[i] === arr[j] ) {
-            temp++
-           }
-        }
-        if (counter === temp) {
-            counter = temp
-        }
-        i++
+    let obj = {};
+    let newArr = [];
+    for(let num of arr){
+        obj[num] ? obj[num]++ : obj[num] = 1;
     }
-    return counter
+    
+    console.log(obj)
+    for(let num in obj){
+      if(newArr.includes(obj[num])) return false
+      else newArr.push(obj[num]);
+      console.log(newArr)
+  }
+    return true;
 };
 
-console.log(uniqueOccurrences([1,2,2,1,1,3]))
+console.log(uniqueOccurrences([1, 2, 4]))
