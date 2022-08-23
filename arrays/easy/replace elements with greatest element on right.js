@@ -7,10 +7,10 @@
 //                 }
 //             }
 //             arr[i] = temp
-            
+
 //             arr[i] = Math.max(...arr.slice(i + 1));
 //         }
-        
+
 //         arr[arr.length - 1] = -1
 //     return arr
 // };
@@ -28,26 +28,26 @@
 //or
 
 
-// var replaceElements = function(arr) {
-    
+var replaceElements = function(arr) {
+
+    let max = -1;
+    for(let i =arr.length -1; i>=0; i--) {
+        const temp = max;
+        max = Math.max(arr[i], max);
+        arr[i] = temp;
+    }
+    return arr
+};
+
+// var replaceElements = function (arr) {
+
 //     let max = -1;
-//     for(let i =arr.length -1; i>=0; i--) {
+//     for (let i = 0; i <= arr.length; i++) {
 //         const temp = max;
 //         max = Math.max(arr[i], max);
 //         arr[i] = temp;
 //     }
 //     return arr
 // };
-
-var replaceElements = function(arr) {
-    
-        let max = -1;
-        for(let i =0 ; i <= arr.length; i++) {
-            const temp = max;
-            max = Math.max(arr[i], max);
-            arr[i] = temp;
-        }
-        return arr
-    };
 
 console.log(replaceElements([17, 6, 5, 4, 18, 1]))
