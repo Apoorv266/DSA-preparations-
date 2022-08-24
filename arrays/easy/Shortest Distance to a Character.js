@@ -7,8 +7,8 @@ var shortestToChar = function (s, c) {
             arr.push(i)
         }
     }
-    
     let min = 1000000;
+
     for (let j = 0; j < s.length; j++) {
         for (let x = 0; x < arr.length; x++) {
 
@@ -16,12 +16,9 @@ var shortestToChar = function (s, c) {
                 min = Math.abs(arr[x] - j);
             }
         }
-
         arr2.push(min);
         min = 1000000;
     }
-
-    // console.log(arr)
     return arr2
 };
 
