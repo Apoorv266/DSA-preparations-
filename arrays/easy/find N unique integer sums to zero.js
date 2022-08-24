@@ -11,11 +11,11 @@ var sumZero = function (n) {
         output.push(index)
         output.push(-index)
       
-        // console.log(output.length,n)
+        console.log(output.length,n)
     }
 
     return output
 };
 
-console.log(sumZero(3))
+console.log(sumZero(6))
 
