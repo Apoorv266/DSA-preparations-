@@ -27,24 +27,35 @@
 
 
 var sortEvenOdd = function (nums) {
-    let temp = 0
+    if (nums.length < 3) return nums;
+    const evens = [];
+    const odds = [];
+    const res = [];
+
     for (let i = 0; i < nums.length; i++) {
-        for (let j = 1; j < nums.length; j++) {
-            if (i % 2 === 0) {
-                if (nums[i] > nums[j]) {
-                    temp = nums[i]
-                    nums[i] = nums[j]
-                    nums[j] = temp
-                }
-            }
-            else{
-                break
-            }
-
-        }
-
+        if (i % 2 === 0) evens.push(nums[i]);
+        else odds.push(nums[i]);
     }
-    return nums
-}
 
-console.log(sortEvenOdd([6, 1, 4, 3, 2, 5]))
+    evens.sort((a, b) => a - b);
+    odds.sort((a, b) => b - a);
+
+    console.log(evens, odds)
+
+    for (let i = 0; i < nums.length; i++) {
+        if (i % 2 === 0) {
+            // res.push(evens[i]) 
+            res[i] = evens[i]
+            // console.log(i) 
+        
+        }
+        // else{
+        //     // res.push(odds[i]);
+        //     res[i] = odds[i]
+        // }
+    }
+
+    return res;
+};
+
+console.log(sortEvenOdd([10, 1, 42, 3, 2, 5]))
