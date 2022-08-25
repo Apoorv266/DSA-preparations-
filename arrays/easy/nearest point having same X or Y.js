@@ -17,5 +17,5 @@ var nearestValidPoint = function (points, x, y) {
     }
     return index
 };
-
+ 
 console.log(nearestValidPoint([[1, 2], [3, 1], [2,4]], 3, 4))
