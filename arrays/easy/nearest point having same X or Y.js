@@ -12,7 +12,6 @@ var nearestValidPoint = function (points, x, y) {
             }
         }
     }
-    
     if (index === Infinity) {
         return -1
     }
