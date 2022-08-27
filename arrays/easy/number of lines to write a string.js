@@ -5,7 +5,7 @@ var numberOfLines = function (widths, s) {
     console.log(base)
     console.log(s.charCodeAt(1) - base)
     console.log(widths[s.charCodeAt(0) - base])
-    //  
+    
     let currentPixels = 0
 
     for (let i = 0; i < s.length; i++) {
