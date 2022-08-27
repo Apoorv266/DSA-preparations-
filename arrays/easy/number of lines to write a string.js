@@ -1,16 +1,25 @@
-var numberOfLines = function (s) {
-    console.log(s.length)
-    console.log(s.length - 10)
-    console.log("------------")
-    let subs = s.length
-    let i = 12
-    let counter = 0
-    while (subs >= 10) {
-        let diff = subs - 10
-        subs = diff
-        counter++
-    }
-    return s.length
-};
+var numberOfLines = function (widths, s) {
+    let lines = 0
+    const maxPixels = 100
+    const base = 'a'.charCodeAt(0)
+    console.log(base)
+    console.log(s.charCodeAt(1) - base)
+    console.log(widths[s.charCodeAt(0) - base])
+    //  
+    let currentPixels = 0
 
-console.log(numberOfLines("abcdefghijklmnopqrstuvwxyz"))
+    for (let i = 0; i < s.length; i++) {
+      const width = widths[s.charCodeAt(i) - base]
+      currentPixels += width
+  
+      if (currentPixels > maxPixels) {
+        currentPixels = width
+        lines += 1
+      }
+    }
+    return (currentPixels > 0) ? [lines + 1, currentPixels] : [lines, currentPixels]
+  };
+
+console.log(numberOfLines([10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10], "abcdefghijklmnopqrstuvwxyz"))
+
+
