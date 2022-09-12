@@ -1,23 +1,14 @@
 var findKDistantIndices = function(nums, key, k) {
-    let arr = []
-    let indices = []
-
-    for (let i = 0; i < nums.length ; i++) {
-        if (nums[i] == key) {
-            indices.push(i)
-        }
-    }
-
+    const result = new Set() 
+    
+  for (let i = 0; i < nums.length; i++) {
     for (let j = 0; j < nums.length; j++) {
-        
-        for (let v = 0; v < indices.length; v++) {
-            if (condition) {
-                arr.push(j)
-            }
-        }
-        
+      if (nums[j] === key && Math.abs(i - j) <= k) {
+          result.add(i)
+      }
     }
-    return indices
+  }
+  return Array.from(result)
 };
 
 console.log(findKDistantIndices([3,4,9,1,3,9,5], 9 , 1))
