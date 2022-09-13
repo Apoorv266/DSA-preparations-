@@ -38,3 +38,8 @@ var threeConsecutiveOdds2 = function (arr) {
 };
 
 console.log(threeConsecutiveOdds2([1, 3]))
+
+
+let arr = ["1", "2","15", "-7", "300"]
+let y = arr.sort()
+
