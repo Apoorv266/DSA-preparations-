@@ -12,7 +12,7 @@ var threeConsecutiveOdds1 = function (arr) {
 
 console.log(threeConsecutiveOdds1([1, 2, 34, 3, 4, 5, 7, 23, 12]))
 
-z
+
 // or
 
 
